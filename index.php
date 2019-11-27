@@ -1,7 +1,7 @@
 <?php
 include ('simple_html_dom.php');
 
-$searched_string = htmlspecialchars($_GET["s"]);
+$searched_string = strtolower(str_replace(" ", "-", htmlspecialchars($_GET["s"])));
 
 if(!empty($searched_string)){
 	//$url = 'https://www.magnetdl.com/r/rick-and-morty-1080p-web-dl-x264-rapta/';
